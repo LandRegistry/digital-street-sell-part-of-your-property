@@ -1,0 +1,55 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  How many parts would you like to split your title into?
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl govuk-!-margin-bottom-3">
+        How would you like to split your property title?
+      </h1>      
+    </div>
+  </div>
+  <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form action="/confirm_details" method="post">
+            <div class="govuk-form-group">                
+                <span id="parts-hint" class="govuk-hint">
+                    For example, Part 1 - 70% and Part 2 - 30%
+                </span>
+            </div>
+            <div class="govuk-form-group">                
+                <label class="govuk-label" for="part-1">
+                    Part 1
+                </label>
+                <input class="govuk-input govuk-input--width-5" id="part-1" name="parts" type="text">
+            </div>
+            <div class="govuk-form-group">    
+                <label class="govuk-label" for="part-2">
+                    Part 2
+                </label>
+                <input class="govuk-input govuk-input--width-5" id="part-2" name="parts" type="text">
+            </div>
+            <div class="govuk-form-group">              
+              <button type="submit" class="govuk-button">Continue</button>
+            </div>
+            <details class="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    I don't know how to work this out
+                  </span>
+                </summary>
+                <div class="govuk-details__text">
+                    I don't know how to work this out
+                </div>
+            </details>
+        </form>
+
+      </div>
+  </div>
+
+{% endblock %}

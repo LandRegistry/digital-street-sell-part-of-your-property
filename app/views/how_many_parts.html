@@ -1,0 +1,44 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  How would you like to split your property title?
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl govuk-!-margin-bottom-3">
+        How would you like to split your property title?
+      </h1>      
+    </div>
+  </div>
+  <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form action="/how_to_split" method="post">
+            <div class="govuk-form-group">                
+                <span id="parts-hint" class="govuk-hint">
+                    If you're keeping part of the property, please include this as a part in the amount you enter.
+                </span>
+                <input class="govuk-input govuk-input--width-3" id="width-3" name="parts" type="text">
+            </div>
+            <div class="govuk-form-group">              
+              <button type="submit" class="govuk-button">Continue</button>
+            </div>
+            <details class="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    I don't know how to work this out
+                  </span>
+                </summary>
+                <div class="govuk-details__text">
+                    I don't know how to work this out
+                </div>
+            </details>
+        </form>
+
+      </div>
+  </div>
+
+{% endblock %}

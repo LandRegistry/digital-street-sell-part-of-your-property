@@ -1,0 +1,74 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  How would you like to split your property title?
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        Confirm details
+      </h1>
+
+      <div class="govuk-warning-text">
+        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+        <strong class="govuk-warning-text__text">
+          <span class="govuk-warning-text__assistive">Warning</span>
+          Don't continue until you're happy that these details are correct.
+        </strong>
+      </div>
+
+      <dl class="app-check-your-answers app-check-your-answers--short">
+            <div class="app-check-your-answers__contents">
+            <dt class="app-check-your-answers__question">
+                Property:
+            </dt>
+            <dd class="app-check-your-answers__answer">
+                1 Digital Street (ZQV888860)
+            </dd>
+            <dd class="app-check-your-answers__change">
+                <a href="#">
+                Change<span class="govuk-visually-hidden"> Property</span>
+                </a>
+            </dd>
+            </div>
+
+            <div class="app-check-your-answers__contents">
+                <dt class="app-check-your-answers__question">
+                    We're splitting your title into:
+                </dt>
+                <dd class="app-check-your-answers__answer">
+                    2 parts
+                </dd>
+                <dd class="app-check-your-answers__change">
+                    <a href="#">
+                    Change<span class="govuk-visually-hidden"> number of parts</span>
+                    </a>
+                </dd>
+            </div>
+
+
+            <div class="app-check-your-answers__contents">
+                <dt class="app-check-your-answers__question">
+                    You'll have:
+                </dt>
+                <dd class="app-check-your-answers__answer">
+                    2 parts of 50% each
+                </dd>
+                <dd class="app-check-your-answers__change">
+                    <a href="#">
+                    Change<span class="govuk-visually-hidden"> property split</span>
+                    </a>
+                </dd>
+            </div>
+        </dl>
+
+        <a href="/title_split" class="govuk-button">
+            Confirm and continue
+        </a>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,46 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Sell part of your property
+{% endblock %}}
+
+{% block header %}
+  {% include "includes/cookie-banner.html" %}
+  {# Set serviceName in config.js. #}
+  {{ govukHeader({
+    homepageUrl: "/",
+    serviceName: "",
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">Sell part of your property</h1>
+
+      <p class="govuk-body">Use this service to split your property title.<br>
+      This will allow you to sell part of your property to another person or company.</p>
+
+
+      {{ govukButton({
+        text: "Start now",
+        href: "/login",
+        classes: "govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8"
+      }) }}
+
+      <h2 class="govuk-heading-m">Before you start</h2>
+
+      <p class="govuk-body">You'll need to know:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>your log in details</li>
+        <li>the address of the property you want to sell a part of</li>
+        <li>how many parts you want to split your property title into</li>
+      </ul>
+    
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,48 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Which property do you want to sell a part of?
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl govuk-!-margin-bottom-3">
+        Which property do you want to sell a part of?
+      </h1>      
+    </div>
+  </div>
+  <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-third">
+        <form action="/how_many_parts" method="post">
+            {{ govukSelect({
+            id: "property",
+            name: "property",
+            items: [
+                {
+                value: "ZQV888860",
+                text: "1 Digital Street (ZQV888860)"
+                }
+            ]
+            }) }}
+            <div class="govuk-form-group">              
+              <button type="submit" class="govuk-button">Continue</button>
+            </div>
+            <details class="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    My property isn't listed
+                  </span>
+                </summary>
+                <div class="govuk-details__text">
+                    My property isn't listed
+                </div>
+            </details>
+        </form>
+
+      </div>
+  </div>
+
+{% endblock %}
